@@ -1,0 +1,36 @@
+.form-Contact {
+  padding: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-Contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.form-Contact label {
+  font-size: 1.1rem;
+}
+.form-Contact input,
+textarea {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #e7e7e7;
+  border: none;
+  border-radius: 5px;
+  color: #666;
+  font-family: openSans-700, Arial, sans-serif;
+  font-size: 1rem;
+  padding: 15px;
+  width: 100%;
+}
+
+.form-Contact button {
+  width: 9.5em;
+  height: 3em;
+  color: #e7e7e7;
+}

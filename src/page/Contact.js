@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import "../Style/Contact.css";
 
 const Contact = () => {
   return (
@@ -765,17 +766,22 @@ const Contact = () => {
               </g>
             </g>
           </svg>
-          <form name="contact" method="post" data-netlify="true">
+          <form
+            className="form-Contact"
+            name="contact"
+            method="post"
+            data-netlify="true"
+          >
             <input type="hidden" name="form-name" value="contact" />
 
             <label htmlFor="name">
-              Nom : <input type="text" id="name" name="Nom" />
+              Nom : <input type="text" id="name" name="name" />
             </label>
             <label htmlFor="mail">
-              E-mail : <input type="email" id="mail" name="Email" />
+              E-mail : <input type="email" id="mail" name="email" />
             </label>
             <label htmlFor="msg">
-              Message : <textarea id="msg" name="Message"></textarea>
+              Message : <textarea id="msg" name="message"></textarea>
             </label>
             <button className="btn-contact" type="submit">
               envoyer
