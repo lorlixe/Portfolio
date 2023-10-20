@@ -1,0 +1,36 @@
+.nav-bar {
+  box-shadow: 1px 2px 13px hsl(0deg 0% 13% / 47%);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+.navigation-option {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.navigation li {
+  margin: 1.5em;
+}
+
+.presentation h1 {
+  font-size: 25px;
+}
+.presentation h2 {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.btn-contact {
+  background-color: #ffc727;
+  padding: 1em;
+  color: #a37d12;
+  border-radius: 7px;
+  border: none;
+}

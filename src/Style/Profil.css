@@ -1,0 +1,126 @@
+.profil {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5% 0;
+}
+
+.profil-text {
+  width: 30%;
+}
+
+.profil img {
+  width: 35%;
+}
+
+.profil h1 {
+  width: 56%;
+}
+
+.about {
+  text-align: center;
+  margin: 0 20%;
+  background-color: #ebebeb;
+  padding: 2%;
+  border-radius: 7px;
+}
+
+.section-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 3em;
+}
+
+.image-logo {
+  width: 8%;
+}
+
+.Card {
+  display: flex;
+  justify-content: center;
+  background-color: #ebebeb;
+  padding: 2em;
+  border-radius: 7px;
+}
+
+.Card img {
+  width: 90%;
+}
+
+.allCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(10px, auto);
+  justify-items: center;
+  width: 80%;
+  margin: 0 10%;
+}
+/* Contact */
+.mail,
+.text {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.contact {
+  display: flex;
+  width: 50%;
+  margin: 0 25%;
+  align-items: center;
+}
+
+.contact-image {
+  /* width: 20%; */
+}
+form {
+  padding: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+form ul {
+  list-style: none;
+  padding: 0;
+}
+li.contact-option:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+form label {
+  font-size: 1.1rem;
+}
+form input,
+textarea {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #e7e7e7;
+  border: none;
+  border-radius: 5px;
+  color: #666;
+  font-family: openSans-700, Arial, sans-serif;
+  font-size: 1rem;
+  padding: 15px;
+  width: 100%;
+}
+
+form button {
+  width: 9.5em;
+  height: 3em;
+  color: #e7e7e7;
+}
