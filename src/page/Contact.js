@@ -770,19 +770,19 @@ const Contact = () => {
             name="contact"
             method="post"
             className="form-Contact"
-            data-netlify="true"
             onSubmit="submit"
+            netlify
           >
             <input type="hidden" name="form-name" value="contact" />
 
             <label htmlFor="name">
-              Nom : <input type="text" id="name" name="name" />
+              Nom : <input type="text" name="name" />
             </label>
             <label htmlFor="mail">
-              E-mail : <input type="email" id="mail" name="email" />
+              E-mail : <input type="email" name="email" />
             </label>
             <label htmlFor="msg">
-              Message : <textarea id="msg" name="message"></textarea>
+              Message : <textarea name="message"></textarea>
             </label>
             <button className="btn-contact" type="submit">
               envoyer
