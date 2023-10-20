@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./Style/index.css";
 import App from "./App";
-import Navigation from "./components/Navigation";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Navigation />
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+        rel="stylesheet"
+      />
+    </head>
     <App />
   </React.StrictMode>
 );

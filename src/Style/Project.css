@@ -1,0 +1,21 @@
+.description {
+  display: flex;
+  padding: 5%;
+}
+
+.description img {
+  width: 30%;
+}
+
+.btn {
+  background-color: white;
+  padding: 1em;
+  color: #a37d12;
+  border-radius: 7px;
+  border: solid #ffc727;
+  margin-right: 3%;
+}
+
+.section-button {
+  margin-top: 3%;
+}

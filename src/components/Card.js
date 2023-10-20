@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Card = (props) => {
-  console.log(props);
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isOpen) {
+      navigate(`/projet/${parseInt(props.info.id)}`);
+    }
+  }, [isOpen, navigate, props.info.id]);
+
+  function click() {
+    setIsOpen(isOpen ? false : true);
+  }
   return (
     <div>
-      <div className="Card">
+      <div className="Card" onClick={click}>
         <div>
           {/* <h3>Kasa</h3> */}
           {/* <p>
