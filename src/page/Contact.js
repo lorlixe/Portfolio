@@ -767,22 +767,22 @@ const Contact = () => {
             </g>
           </svg>
           <form
+            className="form-Contact"
             name="contact"
             method="post"
-            className="form-Contact"
-            onSubmit="submit"
-            netlify
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="contact" />
 
             <label htmlFor="name">
-              Nom : <input type="text" name="name" />
+              Nom : <input type="text" id="name" name="name" />
             </label>
             <label htmlFor="mail">
-              E-mail : <input type="email" name="email" />
+              E-mail : <input type="email" id="mail" name="email" />
             </label>
             <label htmlFor="msg">
-              Message : <textarea name="message"></textarea>
+              Message : <textarea id="msg" name="message"></textarea>
             </label>
             <button className="btn-contact" type="submit">
               envoyer
