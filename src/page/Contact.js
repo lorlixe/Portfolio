@@ -767,10 +767,11 @@ const Contact = () => {
             </g>
           </svg>
           <form
-            className="form-Contact"
             name="contact"
             method="post"
+            className="form-Contact"
             data-netlify="true"
+            onSubmit="submit"
           >
             <input type="hidden" name="form-name" value="contact" />
 
