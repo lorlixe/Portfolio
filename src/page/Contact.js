@@ -1,40 +1,11 @@
-import React from "react";
 import Navigation from "../components/Navigation";
 import "../Style/Contact.css";
 
-class ContactForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: "", mail: "", msg: "" };
-  }
-
-  encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
-  handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({ "form-name": "contact", ...this.state }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
-    e.preventDefault();
-  };
-
-  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
-
-  render() {
-    return (
+const Contact = () => {
+  return (
+    <div>
+      <Navigation />
       <div>
-        {" "}
-        <Navigation />
         <h2>Contact</h2>
         <div className="contact">
           <svg
@@ -796,47 +767,31 @@ class ContactForm extends React.Component {
             </g>
           </svg>
           <form
-            onSubmit={this.handleSubmit}
             className="form-Contact"
             name="contact"
+            method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="contact" />
+
             <label htmlFor="name">
-              Nom :{" "}
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="votre-classe"
-              />
+              Nom : <input type="text" id="name" name="name" />
             </label>
             <label htmlFor="mail">
-              E-mail :{" "}
-              <input
-                type="email"
-                id="mail"
-                name="email"
-                className="votre-classe"
-              />
+              E-mail : <input type="email" id="mail" name="email" />
             </label>
             <label htmlFor="msg">
-              Message :{" "}
-              <textarea
-                id="msg"
-                name="message"
-                className="votre-classe"
-              ></textarea>
+              Message : <textarea id="msg" name="message"></textarea>
             </label>
             <button className="btn-contact" type="submit">
-              Envoyer
+              envoyer
             </button>
           </form>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
-export default ContactForm;
+export default Contact;
