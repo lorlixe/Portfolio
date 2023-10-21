@@ -772,8 +772,9 @@ const Contact = () => {
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            action="/contact"
           >
-            <input type="hidden" name="_append" value="false" />
+            <input type="hidden" name="form-name" value="contact" />
 
             <label htmlFor="name">
               Nom : <input type="text" id="name" name="name" />
