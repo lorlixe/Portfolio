@@ -21,7 +21,6 @@ const Project = () => {
       .then(({ data }) => {
         const findData = data.find((item) => item.id === projetId);
         console.log(findData);
-        console.log(typeof projetId);
 
         if (findData) {
           setOneData(findData);
@@ -33,7 +32,7 @@ const Project = () => {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
+  }, [navigate, projetId, OneData.Url]);
 
   return (
     <div>
