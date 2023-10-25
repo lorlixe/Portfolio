@@ -33,6 +33,7 @@
   color: #a37d12;
   border-radius: 7px;
   border: none;
+  cursor: pointer;
 }
 .link {
   text-decoration: none;

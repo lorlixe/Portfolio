@@ -1,11 +1,24 @@
+import { useState } from "react";
+import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import "../Style/Contact.css";
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [isValid, setIsValid] = useState(true);
+
+  const handleEmailChange = (event) => {
+    const { value } = event.target;
+    setEmail(value);
+
+    // Vérification de l'adresse e-mail avec une expression régulière
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    setIsValid(emailPattern.test(value));
+  };
   return (
     <div>
       <Navigation />
-      <div>
+      <div className="page">
         <h2>Contact</h2>
         <div className="contact">
           <svg
@@ -777,20 +790,59 @@ const Contact = () => {
             <input type="hidden" name="form-name" value="contact" />
 
             <label htmlFor="name">
-              Nom : <input type="text" id="name" name="name" />
+              Nom :{" "}
+              <input
+                className="input"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
             </label>
             <label htmlFor="mail">
-              E-mail : <input type="email" id="mail" name="email" />
+              E-mail :{" "}
+              <input
+                type="text"
+                className="input"
+                value={email}
+                onChange={handleEmailChange}
+                required
+              />
+              {isValid ? (
+                <span style={{ color: "green" }}></span>
+              ) : (
+                <span style={{ color: "red" }}>Adresse e-mail invalide</span>
+              )}
             </label>
             <label htmlFor="msg">
-              Message : <textarea id="msg" name="message"></textarea>
+              Message : <textarea id="msg" name="message" required></textarea>
             </label>
-            <button className="btn-contact" type="submit">
+            <div className="Privacy-section">
+              <label htmlFor="Privacy" className="Privacy">
+                En me fournissant ces informations, vous consentez à ce que je
+                les utilise pour vous recontacter. Vous avez le droit de retirer
+                votre consentement à tout moment, et vos données personnelles ne
+                seront jamais partagées avec des tiers sans votre autorisation
+                explicite. Si vous êtes d'accord pour que je traite vos données
+                personnelles aux fins décrites ci-dessus, veuillez cocher la
+                case ci-dessous :
+              </label>
+              <input
+                className="Privacy-input"
+                type="checkbox"
+                id="Privacy"
+                name="Privacy"
+                required
+              />
+            </div>
+
+            <button className="btn-contact" type="submit" disabled={!isValid}>
               envoyer
             </button>
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -16,8 +16,20 @@ const Card = (props) => {
   return (
     <div>
       <div className="Card" onClick={click}>
+        {props.isHover === props.info.id && (
+          <div className="Card-info">
+            <h2> {props.info.Nom}</h2>
+            <h3> {props.info.Objectif}</h3>
+            <p>Langages utilisés :{props.info.Langage}</p>
+          </div>
+        )}
+        <img
+          className="image-projet"
+          src={props.info.Photo}
+          alt={props.info.Nom}
+        />
+
         <div>
-          {/* <h3>Kasa</h3> */}
           {/* <p>
                 Le projet fait partie d'une formation spécialisée dans le
                 développement front-end avec React dispensée par OpenClassrooms.
@@ -29,11 +41,6 @@ const Card = (props) => {
                 composant par fichier, utilisation de props et de states, etc.)
               </p> */}
         </div>
-        <img
-          className="image-projet"
-          src={props.info.Photo}
-          alt={props.info.Nom}
-        />
       </div>
     </div>
   );

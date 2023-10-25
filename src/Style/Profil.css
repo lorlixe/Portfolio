@@ -41,10 +41,14 @@ h2 {
   border-radius: 7px;
 }
 
+.section-logo-titre {
+  width: 100%;
+}
 .section-logo {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 .image-logo {
@@ -52,51 +56,98 @@ h2 {
 }
 
 .Card {
+  position: relative;
   display: flex;
   justify-content: center;
   background-color: #ebebeb;
   padding: 2em;
   border-radius: 7px;
+  height: 200px;
+  width: 70%;
+}
+.Card-info {
+  background-color: #a37d12;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 92%;
+  height: 100%;
+  background-color: rgba(42, 41, 41, 0.8);
+  z-index: 1;
+  padding: 0 4%;
+  color: white;
+  border-radius: 7px;
+}
+
+.Card-info h3,
+.Card-info h2 {
+  font-family: "Quicksand";
+  font-size: x-large;
+  padding: 0;
+}
+.Card-info p {
+  font-style: italic;
+  font-size: large;
+  padding: 0;
 }
 
 .Card img {
-  width: 90%;
+  width: 70%;
+  object-fit: contain;
+  position: absolute;
+  height: 70%;
+  z-index: 0;
 }
 
 .allCard {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  grid-auto-rows: minmax(10px, auto);
-  justify-items: center;
-  width: 80%;
-  margin: 0 10%;
-}
-/* Contact */
-.mail,
-.text {
-  animation: float 2s ease-in-out infinite;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2%;
+  width: 100%;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
+.grille {
+  width: 100%;
+}
+.Card:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .profil {
+    align-items: flex-start;
   }
-  50% {
-    transform: translateY(-20px);
+  .profil-text p {
+    width: 95%;
   }
-  100% {
-    transform: translateY(0px);
+  .profil img {
+    width: 43%;
+  }
+  .allCard {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .Card {
+    width: 90%;
   }
 }
 
-.contact {
-  display: flex;
-  width: 50%;
-  margin: 0 25%;
-  align-items: center;
-}
-
-.contact-image {
-  /* width: 20%; */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .profil {
+    align-items: flex-start;
+  }
+  .profil-text p {
+    width: 95%;
+  }
+  .profil img {
+    width: 43%;
+  }
+  .allCard {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .Card {
+    width: 85%;
+  }
 }

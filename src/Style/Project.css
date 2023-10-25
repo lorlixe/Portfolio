@@ -14,8 +14,20 @@
   border-radius: 7px;
   border: solid #ffc727;
   margin-right: 3%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffc727;
+  color: white;
 }
 
 .section-button {
   margin-top: 3%;
+}
+
+@media (max-width: 767px) {
+  .description {
+    flex-direction: column-reverse;
+  }
 }

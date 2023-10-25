@@ -1,3 +1,26 @@
+/* Contact */
+.mail,
+.text {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
 .form-Contact {
   padding: 5%;
   width: 100%;
@@ -13,7 +36,7 @@
 .form-Contact label {
   font-size: 1.1rem;
 }
-.form-Contact input,
+.input,
 textarea {
   align-items: flex-start;
   display: flex;
@@ -27,10 +50,37 @@ textarea {
   font-size: 1rem;
   padding: 15px;
   width: 100%;
+  margin: 5% 0;
 }
 
 .form-Contact button {
   width: 9.5em;
   height: 3em;
   color: #e7e7e7;
+}
+
+.Privacy {
+  font-size: 20px;
+}
+.Privacy-input {
+  width: 10%;
+  margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact svg {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact svg {
+    width: 50%;
+  }
 }

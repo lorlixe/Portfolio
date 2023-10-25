@@ -4,9 +4,19 @@ import axios from "axios";
 import Card from "../components/Card";
 import Navigation from "../components/Navigation";
 import ContactBtn from "../components/ContactBtn";
+import Footer from "../components/Footer";
 
 const Profil = () => {
   const [jsonData, setJsonData] = useState([]);
+  const [isHover, setIsHover] = useState(null);
+
+  const handleMouseEnter = (id) => {
+    setIsHover(id);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHover(null);
+  };
 
   useEffect(() => {
     const sheetsAPIURL =
@@ -43,7 +53,7 @@ const Profil = () => {
           </div>
           <img className="image-dev" src="../Dev.svg" alt="Developpeuse web" />
         </div>
-        <div>
+        <div className="section-logo-titre">
           {/* <div className="about">
             <h3>À propos</h3>
             <p>
@@ -69,15 +79,22 @@ const Profil = () => {
             <img className="image-logo" src="../sass.svg" alt="Logo sass" />
           </div>
         </div>
-        <div>
+        <div className="grille">
           <h2>Projets réalisés</h2>
           <div className="allCard">
             {jsonData.map((i, index) => (
-              <Card info={i} key={index} />
+              <div
+                onMouseEnter={() => handleMouseEnter(i.id)}
+                onMouseLeave={handleMouseLeave}
+                key={index}
+              >
+                <Card info={i} isHover={isHover} />
+              </div>
             ))}
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
