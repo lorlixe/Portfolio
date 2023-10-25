@@ -24,7 +24,7 @@ const Project = () => {
 
         if (findData) {
           setOneData(findData);
-          setIsEmpty(OneData.Url ? false : true);
+          setIsEmpty(OneData.Url ? true : false);
         } else {
           navigate("/error");
         }
