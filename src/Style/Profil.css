@@ -130,6 +130,15 @@ h2 {
   }
   .Card {
     width: 90%;
+    height: 79px;
+  }
+  .Card-info h3,
+  .Card-info h2 {
+    font-size: large;
+  }
+  .Card-info p {
+    font-style: italic;
+    font-size: medium;
   }
 }
 
