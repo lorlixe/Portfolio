@@ -1,12 +1,15 @@
 .nav-bar {
   box-shadow: 1px 2px 13px hsl(0deg 0% 13% / 47%);
+  width: 100%;
 }
 
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 5%;
+  margin: 0;
+  padding: 0 5%;
+  width: 90%;
 }
 .navigation-option {
   display: flex;
@@ -17,6 +20,11 @@
 
 .navigation li {
   margin: 1.5em;
+  cursor: pointer;
+}
+
+.navigation li:hover {
+  color: #ffc727;
 }
 
 .presentation h1 {
@@ -38,4 +46,23 @@
 .link {
   text-decoration: none;
   color: #a37d12;
+}
+
+@media (max-width: 767px) {
+  .navigation li {
+    margin: 0 0.5em;
+  }
+  .navigation-option {
+    padding: 0;
+  }
+  .btn-contact {
+    padding: 0.5em;
+  }
+  .presentation h1 {
+    font-size: 20px;
+  }
+  .presentation h2 {
+    font-size: 15px;
+    font-weight: 100;
+  }
 }

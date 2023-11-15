@@ -1,6 +1,7 @@
 .description {
   display: flex;
   padding: 5%;
+  height: 60vh;
 }
 
 .description img {
@@ -29,5 +30,11 @@
 @media (max-width: 767px) {
   .description {
     flex-direction: column-reverse;
+    height: 120vh;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .description img {
+    width: 50%;
   }
 }

@@ -51,7 +51,7 @@ const Profil = () => {
             </p>
             <ContactBtn />
           </div>
-          <img className="image-dev" src="../Dev.svg" alt="Developpeuse web" />
+          <img className="image-dev" src="./Dev.svg" alt="Developpeuse web" />
         </div>
         <div className="section-logo-titre">
           {/* <div className="about">

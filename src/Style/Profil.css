@@ -109,6 +109,7 @@ h2 {
 
 .grille {
   width: 100%;
+  height: 110vh;
 }
 .Card:hover {
   cursor: pointer;
@@ -116,21 +117,30 @@ h2 {
 
 @media (max-width: 767px) {
   .profil {
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    flex-direction: column-reverse;
+    align-items: center;
   }
-  .profil-text p {
-    width: 95%;
+
+  .profil-text p,
+  .profil-text h1 {
+    width: 100%;
+    text-align: center;
   }
+
   .profil img {
     width: 43%;
+  }
+  .grille {
+    height: 270vh;
   }
   .allCard {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
   .Card {
-    width: 90%;
-    height: 79px;
+    width: 100%;
+    padding: 2em 0;
   }
   .Card-info h3,
   .Card-info h2 {
