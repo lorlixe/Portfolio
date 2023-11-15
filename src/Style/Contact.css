@@ -26,6 +26,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .form-Contact ul {
@@ -48,7 +49,7 @@ textarea {
   color: #666;
   font-family: openSans-700, Arial, sans-serif;
   font-size: 1rem;
-  padding: 15px;
+  padding: 15px 0;
   width: 100%;
   margin: 5% 0;
 }
@@ -73,6 +74,12 @@ textarea {
   }
   .contact svg {
     width: 50%;
+  }
+  .Privacy-section label {
+    font-size: 10px;
+  }
+  .form-Contact {
+    height: 100vh;
   }
 }
 

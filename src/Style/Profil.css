@@ -162,6 +162,9 @@ h2 {
   .profil img {
     width: 43%;
   }
+  .grille {
+    height: 150vh;
+  }
   .allCard {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);

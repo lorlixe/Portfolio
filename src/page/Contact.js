@@ -818,7 +818,7 @@ const Contact = () => {
               Message : <textarea id="msg" name="message" required></textarea>
             </label>
             <div className="Privacy-section">
-              <label htmlFor="Privacy" className="Privacy">
+              <label htmlFor="Privacy" className="Privacy-text">
                 En me fournissant ces informations, vous consentez à ce que je
                 les utilise pour vous recontacter. Vous avez le droit de retirer
                 votre consentement à tout moment, et vos données personnelles ne
