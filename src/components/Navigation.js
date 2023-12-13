@@ -17,7 +17,7 @@ const navigation = () => {
         <div>
           <ul className="navigation-option">
             <NavLink to="/" className="link">
-              <li>Acceuil</li>
+              <li>Accueil</li>
             </NavLink>
             <a
               href={Cv}
